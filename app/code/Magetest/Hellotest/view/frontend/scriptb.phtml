@@ -1,0 +1,19 @@
+
+<?php
+
+/**
+ *  * @var \Mageplaza\HelloWorld\Block\Display $block
+ *   */
+
+echo "bloque:".$block->getStoreId();
+//var_dump($block); die();
+echo $block->getStoreId() . '<br />';
+echo $block->getStoreCode() . '<br />';
+echo "wbname:".$block->getWebsiteId() . '<br />';
+echo $block->getStoreName() . '<br />';
+echo "url:".$block->getStoreUrl() . '<br />';
+echo $block->isStoreActive() . '<br />';
+echo $block->getHref() . '<br />';
+
+
+echo '<link rel="alternate" hreflang="' . $block->getHref() . '" href="'  .$block->getStoreUrl() . '" />';

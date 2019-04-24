@@ -1,0 +1,19 @@
+
+<?php
+
+
+if($block->getUrlCmsPage()!='') //we check if we are in a CMS page
+{
+	echo "<br>block:".$block->getStoreId()."<br>";
+	//var_dump($block); die();
+	echo "store id:".$block->getStoreId() . '<br />';
+	echo "store code:".$block->getStoreCode() . '<br />';
+	echo "website Id:".$block->getWebsiteId() . '<br />';
+	echo "store name:".$block->getStoreName() . '<br />';
+	echo "store url:".$block->getStoreUrl() . '<br />';
+	echo "<br> url:".$block->getUrlCmsPage()."<br>";
+	if($block->QtyStoresbysite()>1) //we check if the CMS-Page is in more than 1 webpage
+	{
+		echo '<link rel="alternate" hreflang="' . $block->getHref() . '" href="'  .$block->getUrlCmsPage() . '" />';
+	}
+}
